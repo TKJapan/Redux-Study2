@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+// loginReducerは、loginSliceにない、たぶん任意で名前をつけれる
+import loginReducer from '../features/login/loginSlice';
+import taskReducer from '../features/task/taskSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    login: loginReducer,
+    task: taskReducer,
   },
 });
